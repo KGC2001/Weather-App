@@ -1,0 +1,118 @@
+/* src/components/Weather.css */
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, lightyellow, lightgreen, lightblue, red);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+  }
+  
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  
+  .weather-container {
+    font-family: Arial, sans-serif;
+    margin: 50px auto;
+    width: 350px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+    backdrop-filter: blur(10px);
+  }
+
+  .weather-container.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .weather-container.light-mode {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+    display: flex;
+
+    justify-content: center;
+  }
+  button{
+    margin-right: 5px;
+  }
+  
+  .search-box input {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .search-box button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+
+
+  .weather-info {
+    margin-top: 20px;
+    position: relative;
+    color: #34495e;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error {
+    color: red;
+  }
+
+  .weather-info h2 {
+    font-size: 26px;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textBackground 5s linear infinite;
+    text-shadow: none;
+  }
+  .weather-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color:crimson;
+  }
+
+
+  
